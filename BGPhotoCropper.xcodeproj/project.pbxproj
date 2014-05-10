@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		11AF602E191E766900A4E5CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AF602D191E766900A4E5CD /* Foundation.framework */; };
+		11AF6030191E766900A4E5CD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AF602F191E766900A4E5CD /* CoreGraphics.framework */; };
+		11AF6032191E766900A4E5CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AF6031191E766900A4E5CD /* UIKit.framework */; };
+		11AF6038191E766900A4E5CD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11AF6036191E766900A4E5CD /* InfoPlist.strings */; };
+		11AF603A191E766900A4E5CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AF6039191E766900A4E5CD /* main.m */; };
+		11AF603E191E766900A4E5CD /* BGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AF603D191E766900A4E5CD /* BGAppDelegate.m */; };
+		11AF6041191E766900A4E5CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11AF603F191E766900A4E5CD /* Main.storyboard */; };
+		11AF6044191E766900A4E5CD /* BGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AF6043191E766900A4E5CD /* BGViewController.m */; };
+		11AF6046191E766900A4E5CD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11AF6045191E766900A4E5CD /* Images.xcassets */; };
+		11AF604D191E766900A4E5CD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AF604C191E766900A4E5CD /* XCTest.framework */; };
+		11AF604E191E766900A4E5CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AF602D191E766900A4E5CD /* Foundation.framework */; };
+		11AF604F191E766900A4E5CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AF6031191E766900A4E5CD /* UIKit.framework */; };
+		11AF6057191E766900A4E5CD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11AF6055191E766900A4E5CD /* InfoPlist.strings */; };
+		11AF6059191E766900A4E5CD /* BGPhotoCropperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AF6058191E766900A4E5CD /* BGPhotoCropperTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		11AF6050191E766900A4E5CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 11AF6022191E766900A4E5CD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 11AF6029191E766900A4E5CD;
+			remoteInfo = BGPhotoCropper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		11AF602A191E766900A4E5CD /* BGPhotoCropper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BGPhotoCropper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		11AF602D191E766900A4E5CD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		11AF602F191E766900A4E5CD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		11AF6031191E766900A4E5CD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		11AF6035191E766900A4E5CD /* BGPhotoCropper-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BGPhotoCropper-Info.plist"; sourceTree = "<group>"; };
+		11AF6037191E766900A4E5CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		11AF6039191E766900A4E5CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		11AF603B191E766900A4E5CD /* BGPhotoCropper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BGPhotoCropper-Prefix.pch"; sourceTree = "<group>"; };
+		11AF603C191E766900A4E5CD /* BGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BGAppDelegate.h; sourceTree = "<group>"; };
+		11AF603D191E766900A4E5CD /* BGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BGAppDelegate.m; sourceTree = "<group>"; };
+		11AF6040191E766900A4E5CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		11AF6042191E766900A4E5CD /* BGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BGViewController.h; sourceTree = "<group>"; };
+		11AF6043191E766900A4E5CD /* BGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BGViewController.m; sourceTree = "<group>"; };
+		11AF6045191E766900A4E5CD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		11AF604B191E766900A4E5CD /* BGPhotoCropperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BGPhotoCropperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		11AF604C191E766900A4E5CD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		11AF6054191E766900A4E5CD /* BGPhotoCropperTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BGPhotoCropperTests-Info.plist"; sourceTree = "<group>"; };
+		11AF6056191E766900A4E5CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		11AF6058191E766900A4E5CD /* BGPhotoCropperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BGPhotoCropperTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		11AF6027191E766900A4E5CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11AF6030191E766900A4E5CD /* CoreGraphics.framework in Frameworks */,
+				11AF6032191E766900A4E5CD /* UIKit.framework in Frameworks */,
+				11AF602E191E766900A4E5CD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11AF6048191E766900A4E5CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11AF604D191E766900A4E5CD /* XCTest.framework in Frameworks */,
+				11AF604F191E766900A4E5CD /* UIKit.framework in Frameworks */,
+				11AF604E191E766900A4E5CD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11AF6021191E766900A4E5CD = {
+			isa = PBXGroup;
+			children = (
+				11AF6033191E766900A4E5CD /* BGPhotoCropper */,
+				11AF6052191E766900A4E5CD /* BGPhotoCropperTests */,
+				11AF602C191E766900A4E5CD /* Frameworks */,
+				11AF602B191E766900A4E5CD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		11AF602B191E766900A4E5CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				11AF602A191E766900A4E5CD /* BGPhotoCropper.app */,
+				11AF604B191E766900A4E5CD /* BGPhotoCropperTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		11AF602C191E766900A4E5CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11AF602D191E766900A4E5CD /* Foundation.framework */,
+				11AF602F191E766900A4E5CD /* CoreGraphics.framework */,
+				11AF6031191E766900A4E5CD /* UIKit.framework */,
+				11AF604C191E766900A4E5CD /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		11AF6033191E766900A4E5CD /* BGPhotoCropper */ = {
+			isa = PBXGroup;
+			children = (
+				11AF603C191E766900A4E5CD /* BGAppDelegate.h */,
+				11AF603D191E766900A4E5CD /* BGAppDelegate.m */,
+				11AF603F191E766900A4E5CD /* Main.storyboard */,
+				11AF6042191E766900A4E5CD /* BGViewController.h */,
+				11AF6043191E766900A4E5CD /* BGViewController.m */,
+				11AF6045191E766900A4E5CD /* Images.xcassets */,
+				11AF6034191E766900A4E5CD /* Supporting Files */,
+			);
+			path = BGPhotoCropper;
+			sourceTree = "<group>";
+		};
+		11AF6034191E766900A4E5CD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				11AF6035191E766900A4E5CD /* BGPhotoCropper-Info.plist */,
+				11AF6036191E766900A4E5CD /* InfoPlist.strings */,
+				11AF6039191E766900A4E5CD /* main.m */,
+				11AF603B191E766900A4E5CD /* BGPhotoCropper-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		11AF6052191E766900A4E5CD /* BGPhotoCropperTests */ = {
+			isa = PBXGroup;
+			children = (
+				11AF6058191E766900A4E5CD /* BGPhotoCropperTests.m */,
+				11AF6053191E766900A4E5CD /* Supporting Files */,
+			);
+			path = BGPhotoCropperTests;
+			sourceTree = "<group>";
+		};
+		11AF6053191E766900A4E5CD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				11AF6054191E766900A4E5CD /* BGPhotoCropperTests-Info.plist */,
+				11AF6055191E766900A4E5CD /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		11AF6029191E766900A4E5CD /* BGPhotoCropper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11AF605C191E766900A4E5CD /* Build configuration list for PBXNativeTarget "BGPhotoCropper" */;
+			buildPhases = (
+				11AF6026191E766900A4E5CD /* Sources */,
+				11AF6027191E766900A4E5CD /* Frameworks */,
+				11AF6028191E766900A4E5CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BGPhotoCropper;
+			productName = BGPhotoCropper;
+			productReference = 11AF602A191E766900A4E5CD /* BGPhotoCropper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		11AF604A191E766900A4E5CD /* BGPhotoCropperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11AF605F191E766900A4E5CD /* Build configuration list for PBXNativeTarget "BGPhotoCropperTests" */;
+			buildPhases = (
+				11AF6047191E766900A4E5CD /* Sources */,
+				11AF6048191E766900A4E5CD /* Frameworks */,
+				11AF6049191E766900A4E5CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				11AF6051191E766900A4E5CD /* PBXTargetDependency */,
+			);
+			name = BGPhotoCropperTests;
+			productName = BGPhotoCropperTests;
+			productReference = 11AF604B191E766900A4E5CD /* BGPhotoCropperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		11AF6022191E766900A4E5CD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BG;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = BG;
+				TargetAttributes = {
+					11AF604A191E766900A4E5CD = {
+						TestTargetID = 11AF6029191E766900A4E5CD;
+					};
+				};
+			};
+			buildConfigurationList = 11AF6025191E766900A4E5CD /* Build configuration list for PBXProject "BGPhotoCropper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 11AF6021191E766900A4E5CD;
+			productRefGroup = 11AF602B191E766900A4E5CD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				11AF6029191E766900A4E5CD /* BGPhotoCropper */,
+				11AF604A191E766900A4E5CD /* BGPhotoCropperTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		11AF6028191E766900A4E5CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11AF6046191E766900A4E5CD /* Images.xcassets in Resources */,
+				11AF6038191E766900A4E5CD /* InfoPlist.strings in Resources */,
+				11AF6041191E766900A4E5CD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11AF6049191E766900A4E5CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11AF6057191E766900A4E5CD /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		11AF6026191E766900A4E5CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11AF6044191E766900A4E5CD /* BGViewController.m in Sources */,
+				11AF603A191E766900A4E5CD /* main.m in Sources */,
+				11AF603E191E766900A4E5CD /* BGAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11AF6047191E766900A4E5CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11AF6059191E766900A4E5CD /* BGPhotoCropperTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		11AF6051191E766900A4E5CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 11AF6029191E766900A4E5CD /* BGPhotoCropper */;
+			targetProxy = 11AF6050191E766900A4E5CD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		11AF6036191E766900A4E5CD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11AF6037191E766900A4E5CD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		11AF603F191E766900A4E5CD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11AF6040191E766900A4E5CD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		11AF6055191E766900A4E5CD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11AF6056191E766900A4E5CD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		11AF605A191E766900A4E5CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		11AF605B191E766900A4E5CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		11AF605D191E766900A4E5CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BGPhotoCropper/BGPhotoCropper-Prefix.pch";
+				INFOPLIST_FILE = "BGPhotoCropper/BGPhotoCropper-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		11AF605E191E766900A4E5CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BGPhotoCropper/BGPhotoCropper-Prefix.pch";
+				INFOPLIST_FILE = "BGPhotoCropper/BGPhotoCropper-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		11AF6060191E766900A4E5CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BGPhotoCropper.app/BGPhotoCropper";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BGPhotoCropper/BGPhotoCropper-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BGPhotoCropperTests/BGPhotoCropperTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		11AF6061191E766900A4E5CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BGPhotoCropper.app/BGPhotoCropper";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BGPhotoCropper/BGPhotoCropper-Prefix.pch";
+				INFOPLIST_FILE = "BGPhotoCropperTests/BGPhotoCropperTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		11AF6025191E766900A4E5CD /* Build configuration list for PBXProject "BGPhotoCropper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11AF605A191E766900A4E5CD /* Debug */,
+				11AF605B191E766900A4E5CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11AF605C191E766900A4E5CD /* Build configuration list for PBXNativeTarget "BGPhotoCropper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11AF605D191E766900A4E5CD /* Debug */,
+				11AF605E191E766900A4E5CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		11AF605F191E766900A4E5CD /* Build configuration list for PBXNativeTarget "BGPhotoCropperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11AF6060191E766900A4E5CD /* Debug */,
+				11AF6061191E766900A4E5CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 11AF6022191E766900A4E5CD /* Project object */;
+}
