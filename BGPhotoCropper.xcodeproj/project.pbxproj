@@ -21,6 +21,8 @@
 		11AF604F191E766900A4E5CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AF6031191E766900A4E5CD /* UIKit.framework */; };
 		11AF6057191E766900A4E5CD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11AF6055191E766900A4E5CD /* InfoPlist.strings */; };
 		11AF6059191E766900A4E5CD /* BGPhotoCropperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AF6058191E766900A4E5CD /* BGPhotoCropperTests.m */; };
+		11AF6064191E77DE00A4E5CD /* BGCropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AF6063191E77DE00A4E5CD /* BGCropViewController.m */; };
+		11AF6067191E77F800A4E5CD /* BGResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AF6066191E77F800A4E5CD /* BGResultViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		11AF6054191E766900A4E5CD /* BGPhotoCropperTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BGPhotoCropperTests-Info.plist"; sourceTree = "<group>"; };
 		11AF6056191E766900A4E5CD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		11AF6058191E766900A4E5CD /* BGPhotoCropperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BGPhotoCropperTests.m; sourceTree = "<group>"; };
+		11AF6062191E77DE00A4E5CD /* BGCropViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGCropViewController.h; sourceTree = "<group>"; };
+		11AF6063191E77DE00A4E5CD /* BGCropViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGCropViewController.m; sourceTree = "<group>"; };
+		11AF6065191E77F700A4E5CD /* BGResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGResultViewController.h; sourceTree = "<group>"; };
+		11AF6066191E77F800A4E5CD /* BGResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGResultViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,10 @@
 				11AF6043191E766900A4E5CD /* BGViewController.m */,
 				11AF6045191E766900A4E5CD /* Images.xcassets */,
 				11AF6034191E766900A4E5CD /* Supporting Files */,
+				11AF6062191E77DE00A4E5CD /* BGCropViewController.h */,
+				11AF6063191E77DE00A4E5CD /* BGCropViewController.m */,
+				11AF6065191E77F700A4E5CD /* BGResultViewController.h */,
+				11AF6066191E77F800A4E5CD /* BGResultViewController.m */,
 			);
 			path = BGPhotoCropper;
 			sourceTree = "<group>";
@@ -251,6 +261,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				11AF6044191E766900A4E5CD /* BGViewController.m in Sources */,
+				11AF6067191E77F800A4E5CD /* BGResultViewController.m in Sources */,
+				11AF6064191E77DE00A4E5CD /* BGCropViewController.m in Sources */,
 				11AF603A191E766900A4E5CD /* main.m in Sources */,
 				11AF603E191E766900A4E5CD /* BGAppDelegate.m in Sources */,
 			);
