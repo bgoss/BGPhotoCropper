@@ -52,7 +52,7 @@
         <!--Crop View Controller-->
         <scene sceneID="zpc-Us-9LJ">
             <objects>
-                <viewController id="bjA-EX-kAL" customClass="BGCropViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="bjA-EX-kAL" customClass="BGCropViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qOw-QM-BgK"/>
                         <viewControllerLayoutGuide type="bottom" id="qpk-CP-fwo"/>
@@ -61,41 +61,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" maximumZoomScale="4" translatesAutoresizingMaskIntoConstraints="NO" id="WNG-w8-KlZ">
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CSX-Gj-GHR">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <subviews>
-                                    <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sqy-nE-vuc">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="320" id="Ibk-uh-eSJ"/>
-                                            <constraint firstAttribute="height" constant="568" id="OOH-J1-nAU"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Sqy-nE-vuc" secondAttribute="trailing" id="BQk-B9-psQ"/>
-                                    <constraint firstItem="Sqy-nE-vuc" firstAttribute="top" secondItem="WNG-w8-KlZ" secondAttribute="top" id="YbB-Lf-s6r"/>
-                                    <constraint firstAttribute="bottom" secondItem="Sqy-nE-vuc" secondAttribute="bottom" id="jpx-fn-EzS"/>
-                                    <constraint firstItem="Sqy-nE-vuc" firstAttribute="leading" secondItem="WNG-w8-KlZ" secondAttribute="leading" id="oEd-bW-s9w"/>
+                                    <constraint firstAttribute="width" constant="320" id="BCN-gj-npQ"/>
+                                    <constraint firstAttribute="height" constant="568" id="ZBc-un-fbz"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="delegate" destination="bjA-EX-kAL" id="bHW-Sh-7a2"/>
+                                    <outletCollection property="gestureRecognizers" destination="jRh-U9-aUN" appends="YES" id="dZf-dH-0W6"/>
+                                    <outletCollection property="gestureRecognizers" destination="A07-9Z-AdB" appends="YES" id="cQ1-yI-31g"/>
+                                    <outletCollection property="gestureRecognizers" destination="vlI-Jn-aAu" appends="YES" id="ONI-Pc-wu6"/>
                                 </connections>
-                            </scrollView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1q4-ME-BSl">
-                                <rect key="frame" x="20" y="120" width="280" height="150"/>
+                            </imageView>
+                            <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QVW-aM-aGf">
+                                <rect key="frame" x="20" y="198" width="280" height="145"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="145" id="Fqc-IB-zzq"/>
+                                    <constraint firstAttribute="width" constant="280" id="xyO-Co-FCQ"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="qpk-CP-fwo" firstAttribute="top" secondItem="WNG-w8-KlZ" secondAttribute="bottom" id="4x5-uE-5pO"/>
-                            <constraint firstItem="WNG-w8-KlZ" firstAttribute="top" secondItem="uIp-sD-g67" secondAttribute="top" id="KR4-Qp-BEL"/>
-                            <constraint firstItem="WNG-w8-KlZ" firstAttribute="leading" secondItem="uIp-sD-g67" secondAttribute="leading" id="NOf-gO-CZg"/>
-                            <constraint firstAttribute="trailing" secondItem="WNG-w8-KlZ" secondAttribute="trailing" id="neR-Ll-31k"/>
+                            <constraint firstAttribute="centerY" secondItem="CSX-Gj-GHR" secondAttribute="centerY" id="K44-Tw-Ze4"/>
+                            <constraint firstItem="QVW-aM-aGf" firstAttribute="top" secondItem="uIp-sD-g67" secondAttribute="top" constant="198" id="eU7-Ky-W4t"/>
+                            <constraint firstAttribute="centerX" secondItem="CSX-Gj-GHR" secondAttribute="centerX" id="fCB-Up-vnv"/>
+                            <constraint firstAttribute="centerX" secondItem="QVW-aM-aGf" secondAttribute="centerX" id="u0e-7U-KEk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="E3W-VO-MUF">
@@ -111,12 +106,29 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="_cropRect" destination="1q4-ME-BSl" id="r77-Pi-m6X"/>
-                        <outlet property="_imageView" destination="Sqy-nE-vuc" id="uwj-Cr-fyj"/>
-                        <outlet property="_scrollView" destination="WNG-w8-KlZ" id="LMH-dJ-Qzh"/>
+                        <outlet property="_cropRect" destination="QVW-aM-aGf" id="qbn-U3-oBR"/>
+                        <outlet property="_imageView" destination="CSX-Gj-GHR" id="B1n-6H-zuZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dG0-ng-J25" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <rotationGestureRecognizer id="jRh-U9-aUN">
+                    <connections>
+                        <action selector="rotationGesture:" destination="bjA-EX-kAL" id="bc3-zU-m4j"/>
+                        <outlet property="delegate" destination="bjA-EX-kAL" id="aUx-HW-GXe"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <pinchGestureRecognizer id="A07-9Z-AdB">
+                    <connections>
+                        <action selector="pinchGesture:" destination="bjA-EX-kAL" id="A3n-Bw-riA"/>
+                        <outlet property="delegate" destination="bjA-EX-kAL" id="Zci-3W-Kze"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="vlI-Jn-aAu">
+                    <connections>
+                        <action selector="panGesture:" destination="bjA-EX-kAL" id="pf6-Cv-ajS"/>
+                        <outlet property="delegate" destination="bjA-EX-kAL" id="vwg-uP-lOV"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="334" y="28"/>
         </scene>
