@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BGCropViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface BGCropViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIScrollViewDelegate>
 
 @end

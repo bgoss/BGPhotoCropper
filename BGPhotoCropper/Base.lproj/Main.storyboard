@@ -61,36 +61,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CSX-Gj-GHR">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.69999999999999996" maximumZoomScale="4" translatesAutoresizingMaskIntoConstraints="NO" id="7jT-f6-Vcb">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J1H-HK-mfJ" userLabel="ContainerView">
+                                        <rect key="frame" x="0.0" y="0.0" width="640" height="1136"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lbb-f2-5dR">
+                                                <rect key="frame" x="160" y="284" width="320" height="568"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="320" id="Jbo-mR-ooA"/>
+                                                    <constraint firstAttribute="height" constant="568" id="NEF-GT-E0u"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="jRh-U9-aUN" appends="YES" id="PYi-rD-B5Z"/>
+                                                </connections>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1136" id="2Vo-tt-ecN"/>
+                                            <constraint firstAttribute="centerY" secondItem="Lbb-f2-5dR" secondAttribute="centerY" id="U1r-sS-Sny"/>
+                                            <constraint firstAttribute="centerX" secondItem="Lbb-f2-5dR" secondAttribute="centerX" id="eBU-Bf-vUb"/>
+                                            <constraint firstAttribute="width" constant="640" id="yqH-MM-S8e"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="BCN-gj-npQ"/>
-                                    <constraint firstAttribute="height" constant="568" id="ZBc-un-fbz"/>
+                                    <constraint firstAttribute="width" constant="320" id="17w-yn-uwB"/>
+                                    <constraint firstAttribute="height" constant="568" id="FnS-oI-Sn0"/>
+                                    <constraint firstItem="J1H-HK-mfJ" firstAttribute="leading" secondItem="7jT-f6-Vcb" secondAttribute="leading" id="MXM-DA-oJ6"/>
+                                    <constraint firstAttribute="trailing" secondItem="J1H-HK-mfJ" secondAttribute="trailing" id="TdM-yC-SxV"/>
+                                    <constraint firstAttribute="bottom" secondItem="J1H-HK-mfJ" secondAttribute="bottom" id="xSU-cG-KdU"/>
+                                    <constraint firstItem="J1H-HK-mfJ" firstAttribute="top" secondItem="7jT-f6-Vcb" secondAttribute="top" id="yBW-vc-0GI"/>
                                 </constraints>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="jRh-U9-aUN" appends="YES" id="dZf-dH-0W6"/>
-                                    <outletCollection property="gestureRecognizers" destination="A07-9Z-AdB" appends="YES" id="cQ1-yI-31g"/>
-                                    <outletCollection property="gestureRecognizers" destination="vlI-Jn-aAu" appends="YES" id="ONI-Pc-wu6"/>
+                                    <outlet property="delegate" destination="bjA-EX-kAL" id="1Be-zr-H8X"/>
                                 </connections>
-                            </imageView>
-                            <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QVW-aM-aGf">
-                                <rect key="frame" x="20" y="198" width="280" height="145"/>
+                            </scrollView>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e8C-7p-qbu" userLabel="cropFrame">
+                                <rect key="frame" x="40" y="180" width="240" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="145" id="Fqc-IB-zzq"/>
-                                    <constraint firstAttribute="width" constant="280" id="xyO-Co-FCQ"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="CSX-Gj-GHR" secondAttribute="centerY" id="K44-Tw-Ze4"/>
-                            <constraint firstItem="QVW-aM-aGf" firstAttribute="top" secondItem="uIp-sD-g67" secondAttribute="top" constant="198" id="eU7-Ky-W4t"/>
-                            <constraint firstAttribute="centerX" secondItem="CSX-Gj-GHR" secondAttribute="centerX" id="fCB-Up-vnv"/>
-                            <constraint firstAttribute="centerX" secondItem="QVW-aM-aGf" secondAttribute="centerX" id="u0e-7U-KEk"/>
+                            <constraint firstItem="7jT-f6-Vcb" firstAttribute="leading" secondItem="uIp-sD-g67" secondAttribute="leading" id="8sR-CN-hmj"/>
+                            <constraint firstAttribute="bottom" secondItem="7jT-f6-Vcb" secondAttribute="bottom" id="cdu-bO-oTb"/>
+                            <constraint firstItem="7jT-f6-Vcb" firstAttribute="top" secondItem="uIp-sD-g67" secondAttribute="top" id="ipx-gD-tfi"/>
+                            <constraint firstAttribute="trailing" secondItem="7jT-f6-Vcb" secondAttribute="trailing" id="oMj-Db-cOh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="E3W-VO-MUF">
@@ -106,31 +128,21 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="_cropRect" destination="QVW-aM-aGf" id="qbn-U3-oBR"/>
-                        <outlet property="_imageView" destination="CSX-Gj-GHR" id="B1n-6H-zuZ"/>
+                        <outlet property="_containerView" destination="J1H-HK-mfJ" id="T30-Qq-Blq"/>
+                        <outlet property="_cropRect" destination="e8C-7p-qbu" id="hcX-VN-Ev2"/>
+                        <outlet property="_imageView" destination="Lbb-f2-5dR" id="f8t-XZ-YRo"/>
+                        <outlet property="_scrollView" destination="7jT-f6-Vcb" id="1gu-tH-Ipg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dG0-ng-J25" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <rotationGestureRecognizer id="jRh-U9-aUN">
                     <connections>
-                        <action selector="rotationGesture:" destination="bjA-EX-kAL" id="bc3-zU-m4j"/>
+                        <action selector="rotationGesture:" destination="bjA-EX-kAL" id="R7s-ms-hpN"/>
                         <outlet property="delegate" destination="bjA-EX-kAL" id="aUx-HW-GXe"/>
                     </connections>
                 </rotationGestureRecognizer>
-                <pinchGestureRecognizer id="A07-9Z-AdB">
-                    <connections>
-                        <action selector="pinchGesture:" destination="bjA-EX-kAL" id="A3n-Bw-riA"/>
-                        <outlet property="delegate" destination="bjA-EX-kAL" id="Zci-3W-Kze"/>
-                    </connections>
-                </pinchGestureRecognizer>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="vlI-Jn-aAu">
-                    <connections>
-                        <action selector="panGesture:" destination="bjA-EX-kAL" id="pf6-Cv-ajS"/>
-                        <outlet property="delegate" destination="bjA-EX-kAL" id="vwg-uP-lOV"/>
-                    </connections>
-                </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="334" y="28"/>
+            <point key="canvasLocation" x="335" y="27"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

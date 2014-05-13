@@ -13,6 +13,8 @@
 @interface BGCropViewController () {
     
     __weak IBOutlet UIImageView *_imageView;
+    __weak IBOutlet UIScrollView *_scrollView;
+    __weak IBOutlet UIView *_containerView;
     __weak IBOutlet UIView *_cropRect;
 }
 
@@ -26,7 +28,14 @@
     
     _cropRect.layer.borderColor = UIColor.blackColor.CGColor;
     _cropRect.layer.borderWidth = 2.0;
-    _imageView.layer.anchorPoint = CGPointMake(0.5, 0.5);
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    CGRect visible = [_containerView convertRect:_imageView.bounds fromView:_imageView];
+    [_scrollView scrollRectToVisible:visible animated:NO];
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,6 +58,11 @@
     return _imageView.image;
 }
 
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
+{
+    return _containerView;
+}
+
 #pragma mark - Storyboard
 
 - (IBAction)rotationGesture:(UIRotationGestureRecognizer *)sender
@@ -61,30 +75,6 @@
     
     sender.view.transform = CGAffineTransformRotate(sender.view.transform, sender.rotation);
     sender.rotation = 0;
-}
-
-- (IBAction)pinchGesture:(UIPinchGestureRecognizer *)sender
-{
-    [self adjustAnchorPointForGestureRecognizer:sender];
-    
-    if (sender.state != UIGestureRecognizerStateBegan && sender.state != UIGestureRecognizerStateChanged) {
-        return;
-    }
-    sender.view.transform = CGAffineTransformScale(sender.view.transform, sender.scale, sender.scale);
-    sender.scale = 1;
-}
-
-- (IBAction)panGesture:(UIPanGestureRecognizer *)sender
-{
-    [self adjustAnchorPointForGestureRecognizer:sender];
-    
-    if (sender.state != UIGestureRecognizerStateBegan && sender.state != UIGestureRecognizerStateChanged) {
-        return;
-    }
-    
-    CGPoint translation = [sender translationInView:sender.view];
-    sender.view.transform = CGAffineTransformTranslate(sender.view.transform, translation.x, translation.y);
-    [sender setTranslation:CGPointMake(0, 0) inView:sender.view];
 }
 
 - (void)adjustAnchorPointForGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer {
