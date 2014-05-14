@@ -54,8 +54,14 @@
 
 - (UIImage *)croppedImage
 {
-#warning implemenation needed
-    return _imageView.image;
+    CGFloat borderWidth = _cropRect.layer.borderWidth;
+    CGRect drawRect = CGRectMake(-_cropRect.frame.origin.x - borderWidth, -_cropRect.frame.origin.y - borderWidth , self.view.frame.size.width, self.view.frame.size.height);
+    UIGraphicsBeginImageContext(CGSizeMake(_cropRect.bounds.size.width - 2*borderWidth, _cropRect.bounds.size.height - 2*borderWidth));
+    [self.view drawViewHierarchyInRect:drawRect afterScreenUpdates:YES];
+    UIImage *cropImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return cropImage;
 }
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
