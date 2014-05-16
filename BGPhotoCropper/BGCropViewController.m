@@ -26,8 +26,8 @@
 {
     [super viewDidLoad];
     
-    _cropRect.layer.borderColor = UIColor.blackColor.CGColor;
-    _cropRect.layer.borderWidth = 2.0;
+//    _cropRect.layer.borderColor = UIColor.blackColor.CGColor;
+//    _cropRect.layer.borderWidth = 2.0;
 }
 
 - (void)viewDidAppear:(BOOL)animated

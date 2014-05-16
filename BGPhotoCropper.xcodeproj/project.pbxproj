@@ -24,6 +24,7 @@
 		11AF6059191E766900A4E5CD /* BGPhotoCropperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AF6058191E766900A4E5CD /* BGPhotoCropperTests.m */; };
 		11AF6064191E77DE00A4E5CD /* BGCropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AF6063191E77DE00A4E5CD /* BGCropViewController.m */; };
 		11AF6067191E77F800A4E5CD /* BGResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AF6066191E77F800A4E5CD /* BGResultViewController.m */; };
+		11F289E019261A6B00A9FA2E /* BGCropOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F289DF19261A6B00A9FA2E /* BGCropOverlayView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		11AF6063191E77DE00A4E5CD /* BGCropViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGCropViewController.m; sourceTree = "<group>"; };
 		11AF6065191E77F700A4E5CD /* BGResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGResultViewController.h; sourceTree = "<group>"; };
 		11AF6066191E77F800A4E5CD /* BGResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGResultViewController.m; sourceTree = "<group>"; };
+		11F289DE19261A6B00A9FA2E /* BGCropOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGCropOverlayView.h; sourceTree = "<group>"; };
+		11F289DF19261A6B00A9FA2E /* BGCropOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGCropOverlayView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +136,8 @@
 				11AF6063191E77DE00A4E5CD /* BGCropViewController.m */,
 				11AF6065191E77F700A4E5CD /* BGResultViewController.h */,
 				11AF6066191E77F800A4E5CD /* BGResultViewController.m */,
+				11F289DE19261A6B00A9FA2E /* BGCropOverlayView.h */,
+				11F289DF19261A6B00A9FA2E /* BGCropOverlayView.m */,
 			);
 			path = BGPhotoCropper;
 			sourceTree = "<group>";
@@ -264,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11F289E019261A6B00A9FA2E /* BGCropOverlayView.m in Sources */,
 				11AF6044191E766900A4E5CD /* BGViewController.m in Sources */,
 				11AF6067191E77F800A4E5CD /* BGResultViewController.m in Sources */,
 				11AF6064191E77DE00A4E5CD /* BGCropViewController.m in Sources */,
