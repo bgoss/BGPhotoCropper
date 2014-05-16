@@ -8,6 +8,12 @@
 
 #import "BGCropOverlayView.h"
 
+@interface BGCropOverlayView ()
+
+
+
+@end
+
 @implementation BGCropOverlayView
 
 - (id)initWithFrame:(CGRect)frame

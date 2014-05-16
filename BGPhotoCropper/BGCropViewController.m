@@ -25,17 +25,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-//    _cropRect.layer.borderColor = UIColor.blackColor.CGColor;
-//    _cropRect.layer.borderWidth = 2.0;
+    [self setUpNavigationBar];
+    CGRect visible = [_containerView convertRect:_imageView.bounds fromView:_imageView];
+    _scrollView.contentOffset = visible.origin;
+}
+
+- (void)setUpNavigationBar
+{
+    UIBarButtonItem *saveItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(saveImage)];
+    self.navigationItem.rightBarButtonItem = saveItem;
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
-    CGRect visible = [_containerView convertRect:_imageView.bounds fromView:_imageView];
-    [_scrollView scrollRectToVisible:visible animated:NO];
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,6 +53,18 @@
         BGResultViewController *destinationViewController = (BGResultViewController *)segue.destinationViewController;
         destinationViewController.resultImage = self.croppedImage;
     }
+}
+
+- (void)saveImage
+{
+    [self dismissViewControllerAnimated:YES completion:^{
+        [self.delegate didFinishCropping];
+    }];
+}
+
+- (void)cancel
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (UIImage *)croppedImage
@@ -100,8 +115,8 @@
     }
 }
 
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
-    
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
     return YES;
 }
 

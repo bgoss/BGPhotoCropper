@@ -7,6 +7,7 @@
 //
 
 #import "BGViewController.h"
+#import "BGCropViewController.h"
 
 @interface BGViewController ()
 
@@ -24,6 +25,13 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)startCropperTouchUp:(id)sender
+{
+    BGCropViewController *cropViewController = [[BGCropViewController alloc] init];
+    cropViewController.title = @"Test";
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:cropViewController];
+    [self presentViewController:navigationController animated:YES completion:NULL];
 }
 
 @end

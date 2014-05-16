@@ -12,12 +12,43 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="bjA-EX-kAL" kind="relationship" relationship="rootViewController" id="ZQK-Tq-tMP"/>
+                        <segue destination="mmp-a0-VFE" kind="relationship" relationship="rootViewController" id="S4b-fJ-Vy1"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fhA-9z-US0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-109" y="27"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="l9s-d5-A4U">
+            <objects>
+                <viewController id="mmp-a0-VFE" customClass="BGViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8hP-B0-NyR"/>
+                        <viewControllerLayoutGuide type="bottom" id="ag4-lb-1w5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CLg-Nl-aqG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gM9-mZ-r4g">
+                                <rect key="frame" x="20" y="269" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startCropperTouchUp:" destination="mmp-a0-VFE" eventType="touchUpInside" id="fFs-46-SJp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Bs7-nD-aQt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yRA-ys-cNI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="309" y="193"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="SDb-4t-1Pw">
@@ -48,10 +79,17 @@
             </objects>
             <point key="canvasLocation" x="774" y="28"/>
         </scene>
-        <!--Crop View Controller-->
+        <!--View Controller-->
         <scene sceneID="zpc-Us-9LJ">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="bjA-EX-kAL" customClass="BGCropViewController" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dG0-ng-J25" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <rotationGestureRecognizer id="jRh-U9-aUN">
+                    <connections>
+                        <action selector="rotationGesture:" destination="bjA-EX-kAL" id="R7s-ms-hpN"/>
+                        <outlet property="delegate" destination="bjA-EX-kAL" id="aUx-HW-GXe"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="bjA-EX-kAL" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qOw-QM-BgK"/>
                         <viewControllerLayoutGuide type="bottom" id="qpk-CP-fwo"/>
@@ -103,6 +141,15 @@
                             <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e8C-7p-qbu" userLabel="cropFrame" customClass="BGCropOverlayView">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bewegen und Skalieren" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7d-gz-3Sd">
+                                        <rect key="frame" x="20" y="43" width="280" height="23"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -133,15 +180,8 @@
                         <outlet property="_scrollView" destination="7jT-f6-Vcb" id="1gu-tH-Ipg"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dG0-ng-J25" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <rotationGestureRecognizer id="jRh-U9-aUN">
-                    <connections>
-                        <action selector="rotationGesture:" destination="bjA-EX-kAL" id="R7s-ms-hpN"/>
-                        <outlet property="delegate" destination="bjA-EX-kAL" id="aUx-HW-GXe"/>
-                    </connections>
-                </rotationGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="335" y="27"/>
+            <point key="canvasLocation" x="309" y="-532"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

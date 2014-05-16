@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol BGCropViewDelegate <NSObject>
+
+- (void)didFinishCropping;
+
+@end
+
 @interface BGCropViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIScrollViewDelegate>
+
+@property id<BGCropViewDelegate> delegate;
 
 @end
