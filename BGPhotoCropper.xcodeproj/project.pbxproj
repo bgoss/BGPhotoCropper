@@ -38,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		111404E51929642B00A44A21 /* BGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGViewController.h; sourceTree = "<group>"; };
 		117941A519201BFA00807F02 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		11AF602A191E766900A4E5CD /* BGPhotoCropper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BGPhotoCropper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11AF602D191E766900A4E5CD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -50,7 +51,6 @@
 		11AF603C191E766900A4E5CD /* BGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BGAppDelegate.h; sourceTree = "<group>"; };
 		11AF603D191E766900A4E5CD /* BGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BGAppDelegate.m; sourceTree = "<group>"; };
 		11AF6040191E766900A4E5CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		11AF6042191E766900A4E5CD /* BGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BGViewController.h; sourceTree = "<group>"; };
 		11AF6043191E766900A4E5CD /* BGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BGViewController.m; sourceTree = "<group>"; };
 		11AF6045191E766900A4E5CD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		11AF604B191E766900A4E5CD /* BGPhotoCropperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BGPhotoCropperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,17 +90,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		111404DC19295DBF00A44A21 /* example */ = {
+		111404E41929628300A44A21 /* example */ = {
 			isa = PBXGroup;
 			children = (
+				11AF6045191E766900A4E5CD /* Images.xcassets */,
+				11AF603F191E766900A4E5CD /* Main.storyboard */,
 				11AF603C191E766900A4E5CD /* BGAppDelegate.h */,
 				11AF603D191E766900A4E5CD /* BGAppDelegate.m */,
-				11AF603F191E766900A4E5CD /* Main.storyboard */,
-				11AF6042191E766900A4E5CD /* BGViewController.h */,
+				111404E51929642B00A44A21 /* BGViewController.h */,
 				11AF6043191E766900A4E5CD /* BGViewController.m */,
-				11AF6045191E766900A4E5CD /* Images.xcassets */,
 			);
-			name = example;
+			path = example;
 			sourceTree = "<group>";
 		};
 		11AF6021191E766900A4E5CD = {
@@ -137,7 +137,7 @@
 		11AF6033191E766900A4E5CD /* BGPhotoCropper */ = {
 			isa = PBXGroup;
 			children = (
-				111404DC19295DBF00A44A21 /* example */,
+				111404E41929628300A44A21 /* example */,
 				11AF6034191E766900A4E5CD /* Supporting Files */,
 				11AF6062191E77DE00A4E5CD /* BGCropViewController.h */,
 				11AF6063191E77DE00A4E5CD /* BGCropViewController.m */,
@@ -317,6 +317,7 @@
 				11AF6040191E766900A4E5CD /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		11AF6055191E766900A4E5CD /* InfoPlist.strings */ = {
