@@ -63,9 +63,8 @@
 - (UIImage *)croppedImage
 {
     CGFloat borderWidth = 1.0;
-    CGFloat cropRectY = _cropOverlay.frame.origin.y;
     CGRect cropArea = _cropOverlay.cropArea;
-    CGRect drawRect = CGRectMake(- cropArea.origin.x - borderWidth, - cropArea.origin.y - borderWidth - cropRectY, _cropOverlay.frame.size.width, _cropOverlay.frame.size.height);
+    CGRect drawRect = CGRectMake(- cropArea.origin.x - borderWidth, - cropArea.origin.y - borderWidth, _cropOverlay.frame.size.width, _cropOverlay.frame.size.height);
     
     UIGraphicsBeginImageContext(CGSizeMake(cropArea.size.width - 2*borderWidth, cropArea.size.height - 2*borderWidth));
     [self.view drawViewHierarchyInRect:drawRect afterScreenUpdates:YES];
