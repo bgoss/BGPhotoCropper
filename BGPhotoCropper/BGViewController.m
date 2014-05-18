@@ -7,9 +7,10 @@
 //
 
 #import "BGViewController.h"
-#import "BGCropViewController.h"
 
-@interface BGViewController ()
+@interface BGViewController () {
+    __weak IBOutlet UIImageView *_imageView;
+}
 
 @end
 
@@ -30,8 +31,15 @@
 {
     BGCropViewController *cropViewController = [[BGCropViewController alloc] init];
     cropViewController.title = @"Test";
+    cropViewController.image = [UIImage imageNamed:@"36"];
+    cropViewController.delegate = self;
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:cropViewController];
     [self presentViewController:navigationController animated:YES completion:NULL];
+}
+
+- (void)didFinishCropping:(UIImage *)croppedImage
+{
+    _imageView.image = croppedImage;
 }
 
 @end

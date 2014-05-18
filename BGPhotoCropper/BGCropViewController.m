@@ -7,15 +7,15 @@
 //
 
 #import "BGCropViewController.h"
-#import "BGResultViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "BGCropOverlayView.h"
 
 @interface BGCropViewController () {
     
     __weak IBOutlet UIImageView *_imageView;
     __weak IBOutlet UIScrollView *_scrollView;
     __weak IBOutlet UIView *_containerView;
-    __weak IBOutlet UIView *_cropRect;
+    __weak IBOutlet BGCropOverlayView *_cropOverlay;
 }
 
 @end
@@ -28,6 +28,7 @@
     [self setUpNavigationBar];
     CGRect visible = [_containerView convertRect:_imageView.bounds fromView:_imageView];
     _scrollView.contentOffset = visible.origin;
+    _imageView.image = self.image;
 }
 
 - (void)setUpNavigationBar
@@ -47,18 +48,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.identifier isEqualToString:@"showCroppedImage"]) {
-        BGResultViewController *destinationViewController = (BGResultViewController *)segue.destinationViewController;
-        destinationViewController.resultImage = self.croppedImage;
-    }
-}
-
 - (void)saveImage
 {
     [self dismissViewControllerAnimated:YES completion:^{
-        [self.delegate didFinishCropping];
+        [self.delegate didFinishCropping:self.croppedImage];
     }];
 }
 
@@ -69,9 +62,12 @@
 
 - (UIImage *)croppedImage
 {
-    CGFloat borderWidth = _cropRect.layer.borderWidth;
-    CGRect drawRect = CGRectMake(-_cropRect.frame.origin.x - borderWidth, -_cropRect.frame.origin.y - borderWidth , self.view.frame.size.width, self.view.frame.size.height);
-    UIGraphicsBeginImageContext(CGSizeMake(_cropRect.bounds.size.width - 2*borderWidth, _cropRect.bounds.size.height - 2*borderWidth));
+    CGFloat borderWidth = 1.0;
+    CGFloat cropRectY = _cropOverlay.frame.origin.y;
+    CGRect cropArea = _cropOverlay.cropArea;
+    CGRect drawRect = CGRectMake(- cropArea.origin.x - borderWidth, - cropArea.origin.y - borderWidth - cropRectY, _cropOverlay.frame.size.width, _cropOverlay.frame.size.height);
+    
+    UIGraphicsBeginImageContext(CGSizeMake(cropArea.size.width - 2*borderWidth, cropArea.size.height - 2*borderWidth));
     [self.view drawViewHierarchyInRect:drawRect afterScreenUpdates:YES];
     UIImage *cropImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();

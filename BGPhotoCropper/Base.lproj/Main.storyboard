@@ -41,147 +41,21 @@
                                     <action selector="startCropperTouchUp:" destination="mmp-a0-VFE" eventType="touchUpInside" id="fFs-46-SJp"/>
                                 </connections>
                             </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Bs7-nD-aQt"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yRA-ys-cNI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="309" y="193"/>
-        </scene>
-        <!--Result View Controller-->
-        <scene sceneID="SDb-4t-1Pw">
-            <objects>
-                <viewController id="c9O-zo-cSn" customClass="BGResultViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="CEJ-WT-dLO"/>
-                        <viewControllerLayoutGuide type="bottom" id="kvZ-ws-Dlb"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="XRY-De-Nbf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qaX-a2-M8u">
-                                <rect key="frame" x="0.0" y="63" width="320" height="151"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mIo-AI-C5c">
+                                <rect key="frame" x="40" y="114" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="MLf-x3-fi7"/>
+                    <navigationItem key="navigationItem" id="Bs7-nD-aQt"/>
                     <connections>
-                        <outlet property="_imageView" destination="qaX-a2-M8u" id="VUC-oT-zSx"/>
-                        <outlet property="imageView" destination="qaX-a2-M8u" id="4wq-4b-EQ7"/>
+                        <outlet property="_imageView" destination="mIo-AI-C5c" id="2Wa-aB-f7y"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c10-1e-fhC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yRA-ys-cNI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="774" y="28"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="zpc-Us-9LJ">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dG0-ng-J25" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <rotationGestureRecognizer id="jRh-U9-aUN">
-                    <connections>
-                        <action selector="rotationGesture:" destination="bjA-EX-kAL" id="R7s-ms-hpN"/>
-                        <outlet property="delegate" destination="bjA-EX-kAL" id="aUx-HW-GXe"/>
-                    </connections>
-                </rotationGestureRecognizer>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="bjA-EX-kAL" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="qOw-QM-BgK"/>
-                        <viewControllerLayoutGuide type="bottom" id="qpk-CP-fwo"/>
-                    </layoutGuides>
-                    <view key="view" opaque="NO" contentMode="scaleToFill" id="uIp-sD-g67">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <scrollView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.69999999999999996" maximumZoomScale="4" translatesAutoresizingMaskIntoConstraints="NO" id="7jT-f6-Vcb">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <subviews>
-                                    <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J1H-HK-mfJ" userLabel="ContainerView">
-                                        <rect key="frame" x="0.0" y="0.0" width="640" height="1136"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <subviews>
-                                            <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lbb-f2-5dR">
-                                                <rect key="frame" x="160" y="284" width="320" height="568"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="320" id="Jbo-mR-ooA"/>
-                                                    <constraint firstAttribute="height" constant="568" id="NEF-GT-E0u"/>
-                                                </constraints>
-                                                <connections>
-                                                    <outletCollection property="gestureRecognizers" destination="jRh-U9-aUN" appends="YES" id="PYi-rD-B5Z"/>
-                                                </connections>
-                                            </imageView>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1136" id="2Vo-tt-ecN"/>
-                                            <constraint firstAttribute="centerY" secondItem="Lbb-f2-5dR" secondAttribute="centerY" id="U1r-sS-Sny"/>
-                                            <constraint firstAttribute="centerX" secondItem="Lbb-f2-5dR" secondAttribute="centerX" id="eBU-Bf-vUb"/>
-                                            <constraint firstAttribute="width" constant="640" id="yqH-MM-S8e"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="17w-yn-uwB"/>
-                                    <constraint firstAttribute="height" constant="568" id="FnS-oI-Sn0"/>
-                                    <constraint firstItem="J1H-HK-mfJ" firstAttribute="leading" secondItem="7jT-f6-Vcb" secondAttribute="leading" id="MXM-DA-oJ6"/>
-                                    <constraint firstAttribute="trailing" secondItem="J1H-HK-mfJ" secondAttribute="trailing" id="TdM-yC-SxV"/>
-                                    <constraint firstAttribute="bottom" secondItem="J1H-HK-mfJ" secondAttribute="bottom" id="xSU-cG-KdU"/>
-                                    <constraint firstItem="J1H-HK-mfJ" firstAttribute="top" secondItem="7jT-f6-Vcb" secondAttribute="top" id="yBW-vc-0GI"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="delegate" destination="bjA-EX-kAL" id="1Be-zr-H8X"/>
-                                </connections>
-                            </scrollView>
-                            <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e8C-7p-qbu" userLabel="cropFrame" customClass="BGCropOverlayView">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bewegen und Skalieren" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7d-gz-3Sd">
-                                        <rect key="frame" x="20" y="43" width="280" height="23"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="7jT-f6-Vcb" firstAttribute="leading" secondItem="uIp-sD-g67" secondAttribute="leading" id="8sR-CN-hmj"/>
-                            <constraint firstAttribute="bottom" secondItem="7jT-f6-Vcb" secondAttribute="bottom" id="cdu-bO-oTb"/>
-                            <constraint firstItem="7jT-f6-Vcb" firstAttribute="top" secondItem="uIp-sD-g67" secondAttribute="top" id="ipx-gD-tfi"/>
-                            <constraint firstAttribute="trailing" secondItem="7jT-f6-Vcb" secondAttribute="trailing" id="oMj-Db-cOh"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="E3W-VO-MUF">
-                        <barButtonItem key="leftBarButtonItem" systemItem="camera" id="2bZ-uE-OrQ">
-                            <connections>
-                                <action selector="takePicture:" destination="bjA-EX-kAL" id="iEx-FC-xQn"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="pVa-0n-4gW">
-                            <connections>
-                                <segue destination="c9O-zo-cSn" kind="push" identifier="showCroppedImage" id="FKB-Ks-h1h"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="_containerView" destination="J1H-HK-mfJ" id="T30-Qq-Blq"/>
-                        <outlet property="_cropRect" destination="e8C-7p-qbu" id="hcX-VN-Ev2"/>
-                        <outlet property="_imageView" destination="Lbb-f2-5dR" id="f8t-XZ-YRo"/>
-                        <outlet property="_scrollView" destination="7jT-f6-Vcb" id="1gu-tH-Ipg"/>
-                    </connections>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="309" y="-532"/>
+            <point key="canvasLocation" x="309" y="193"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

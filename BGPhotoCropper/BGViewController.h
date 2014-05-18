@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BGCropViewController.h"
 
-@interface BGViewController : UIViewController
+@interface BGViewController : UIViewController <BGCropViewDelegate>
 
 @end

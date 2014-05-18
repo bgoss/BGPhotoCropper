@@ -23,7 +23,6 @@
 		11AF6057191E766900A4E5CD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11AF6055191E766900A4E5CD /* InfoPlist.strings */; };
 		11AF6059191E766900A4E5CD /* BGPhotoCropperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AF6058191E766900A4E5CD /* BGPhotoCropperTests.m */; };
 		11AF6064191E77DE00A4E5CD /* BGCropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AF6063191E77DE00A4E5CD /* BGCropViewController.m */; };
-		11AF6067191E77F800A4E5CD /* BGResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AF6066191E77F800A4E5CD /* BGResultViewController.m */; };
 		11F289E019261A6B00A9FA2E /* BGCropOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F289DF19261A6B00A9FA2E /* BGCropOverlayView.m */; };
 		11F289EF1926447E00A9FA2E /* BGCropViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11F289ED1926447E00A9FA2E /* BGCropViewController.xib */; };
 /* End PBXBuildFile section */
@@ -61,8 +60,6 @@
 		11AF6058191E766900A4E5CD /* BGPhotoCropperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BGPhotoCropperTests.m; sourceTree = "<group>"; };
 		11AF6062191E77DE00A4E5CD /* BGCropViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGCropViewController.h; sourceTree = "<group>"; };
 		11AF6063191E77DE00A4E5CD /* BGCropViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGCropViewController.m; sourceTree = "<group>"; };
-		11AF6065191E77F700A4E5CD /* BGResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGResultViewController.h; sourceTree = "<group>"; };
-		11AF6066191E77F800A4E5CD /* BGResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGResultViewController.m; sourceTree = "<group>"; };
 		11F289DE19261A6B00A9FA2E /* BGCropOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGCropOverlayView.h; sourceTree = "<group>"; };
 		11F289DF19261A6B00A9FA2E /* BGCropOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGCropOverlayView.m; sourceTree = "<group>"; };
 		11F289ED1926447E00A9FA2E /* BGCropViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BGCropViewController.xib; sourceTree = "<group>"; };
@@ -93,6 +90,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		111404DC19295DBF00A44A21 /* example */ = {
+			isa = PBXGroup;
+			children = (
+				11AF603C191E766900A4E5CD /* BGAppDelegate.h */,
+				11AF603D191E766900A4E5CD /* BGAppDelegate.m */,
+				11AF603F191E766900A4E5CD /* Main.storyboard */,
+				11AF6042191E766900A4E5CD /* BGViewController.h */,
+				11AF6043191E766900A4E5CD /* BGViewController.m */,
+				11AF6045191E766900A4E5CD /* Images.xcassets */,
+			);
+			name = example;
+			sourceTree = "<group>";
+		};
 		11AF6021191E766900A4E5CD = {
 			isa = PBXGroup;
 			children = (
@@ -127,17 +137,10 @@
 		11AF6033191E766900A4E5CD /* BGPhotoCropper */ = {
 			isa = PBXGroup;
 			children = (
-				11AF603C191E766900A4E5CD /* BGAppDelegate.h */,
-				11AF603D191E766900A4E5CD /* BGAppDelegate.m */,
-				11AF603F191E766900A4E5CD /* Main.storyboard */,
-				11AF6042191E766900A4E5CD /* BGViewController.h */,
-				11AF6043191E766900A4E5CD /* BGViewController.m */,
-				11AF6045191E766900A4E5CD /* Images.xcassets */,
+				111404DC19295DBF00A44A21 /* example */,
 				11AF6034191E766900A4E5CD /* Supporting Files */,
 				11AF6062191E77DE00A4E5CD /* BGCropViewController.h */,
 				11AF6063191E77DE00A4E5CD /* BGCropViewController.m */,
-				11AF6065191E77F700A4E5CD /* BGResultViewController.h */,
-				11AF6066191E77F800A4E5CD /* BGResultViewController.m */,
 				11F289DE19261A6B00A9FA2E /* BGCropOverlayView.h */,
 				11F289DF19261A6B00A9FA2E /* BGCropOverlayView.m */,
 				11F289ED1926447E00A9FA2E /* BGCropViewController.xib */,
@@ -275,7 +278,6 @@
 			files = (
 				11F289E019261A6B00A9FA2E /* BGCropOverlayView.m in Sources */,
 				11AF6044191E766900A4E5CD /* BGViewController.m in Sources */,
-				11AF6067191E77F800A4E5CD /* BGResultViewController.m in Sources */,
 				11AF6064191E77DE00A4E5CD /* BGCropViewController.m in Sources */,
 				11AF603A191E766900A4E5CD /* main.m in Sources */,
 				11AF603E191E766900A4E5CD /* BGAppDelegate.m in Sources */,

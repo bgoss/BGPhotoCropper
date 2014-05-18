@@ -7,7 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BGCropViewController">
             <connections>
                 <outlet property="_containerView" destination="w86-4L-VAa" id="DXm-p0-AhA"/>
-                <outlet property="_cropRect" destination="2fJ-I2-hbs" id="ppj-v4-Cxm"/>
+                <outlet property="_cropOverlay" destination="2fJ-I2-hbs" id="bPs-hy-flc"/>
                 <outlet property="_imageView" destination="Jru-Hx-iyn" id="Wxc-GT-hqn"/>
                 <outlet property="_scrollView" destination="KKX-ue-uPU" id="fMo-iZ-nMA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

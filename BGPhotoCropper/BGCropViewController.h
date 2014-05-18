@@ -10,12 +10,13 @@
 
 @protocol BGCropViewDelegate <NSObject>
 
-- (void)didFinishCropping;
+- (void)didFinishCropping:(UIImage *)croppedImage;
 
 @end
 
 @interface BGCropViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIScrollViewDelegate>
 
 @property id<BGCropViewDelegate> delegate;
+@property UIImage *image;
 
 @end
