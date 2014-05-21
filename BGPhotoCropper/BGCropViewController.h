@@ -18,5 +18,6 @@
 
 @property id<BGCropViewDelegate> delegate;
 @property UIImage *image;
+@property CGRect cropArea;
 
 @end

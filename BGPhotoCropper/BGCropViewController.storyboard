@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rzV-KY-ijT">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="DKH-V7-c6R">
+            <objects>
+                <navigationController storyboardIdentifier="BGCropNavigationVC" definesPresentationContext="YES" id="rzV-KY-ijT" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wce-vj-IOh">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7vZ-O0-XJf" kind="relationship" relationship="rootViewController" id="Abz-JC-1ek"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b2I-VX-FAm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="91" y="12"/>
+        </scene>
+        <!--Crop View Controller-->
+        <scene sceneID="8w5-CO-SD4">
+            <objects>
+                <viewController id="7vZ-O0-XJf" customClass="BGCropViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wWm-xh-UkE"/>
+                        <viewControllerLayoutGuide type="bottom" id="pXY-gx-0a5"/>
+                    </layoutGuides>
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ATF-1C-oJs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" minimumZoomScale="0.60000002384185791" maximumZoomScale="4" translatesAutoresizingMaskIntoConstraints="NO" id="7fg-2H-FZu">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MSj-iU-UPa" userLabel="ContainerView">
+                                        <rect key="frame" x="0.0" y="0.0" width="640" height="1136"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4AS-Is-xvQ">
+                                                <rect key="frame" x="160" y="316" width="320" height="504"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="504" id="aAp-ip-PRq"/>
+                                                    <constraint firstAttribute="width" constant="320" id="jhD-A8-luR"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="GiM-RN-hnn" appends="YES" id="xVv-Pi-DgH"/>
+                                                </connections>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="centerX" secondItem="4AS-Is-xvQ" secondAttribute="centerX" id="AH8-mc-wIg"/>
+                                            <constraint firstAttribute="width" constant="640" id="EaM-hm-8u6"/>
+                                            <constraint firstAttribute="centerY" secondItem="4AS-Is-xvQ" secondAttribute="centerY" id="YID-7M-0kc"/>
+                                            <constraint firstAttribute="height" constant="1136" id="tSe-ar-QAx"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="MSj-iU-UPa" secondAttribute="bottom" id="3f1-vI-ovQ"/>
+                                    <constraint firstAttribute="height" constant="568" id="CFl-x0-2R6"/>
+                                    <constraint firstAttribute="width" constant="320" id="ajl-G8-odg"/>
+                                    <constraint firstItem="MSj-iU-UPa" firstAttribute="top" secondItem="7fg-2H-FZu" secondAttribute="top" id="i6T-r9-Nxe"/>
+                                    <constraint firstAttribute="trailing" secondItem="MSj-iU-UPa" secondAttribute="trailing" id="pC4-je-4q3"/>
+                                    <constraint firstItem="MSj-iU-UPa" firstAttribute="leading" secondItem="7fg-2H-FZu" secondAttribute="leading" id="xDl-Sr-iFF"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="7vZ-O0-XJf" id="k3z-71-QLg"/>
+                                </connections>
+                            </scrollView>
+                            <view opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XXf-f3-I6d" userLabel="cropFrame" customClass="BGCropOverlayView">
+                                <rect key="frame" x="0.0" y="64" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bewegen und Skalieren" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.70000000000000018" translatesAutoresizingMaskIntoConstraints="NO" id="VBY-b5-IVF">
+                                        <rect key="frame" x="20" y="38" width="280" height="23"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="_instructionsLabel" destination="VBY-b5-IVF" id="lMn-6p-a32"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="7fg-2H-FZu" secondAttribute="trailing" id="EVa-gs-RsA"/>
+                            <constraint firstAttribute="bottom" secondItem="7fg-2H-FZu" secondAttribute="bottom" id="Fhr-ew-YXT"/>
+                            <constraint firstItem="7fg-2H-FZu" firstAttribute="top" secondItem="ATF-1C-oJs" secondAttribute="top" id="YEx-s1-Q5D"/>
+                            <constraint firstItem="7fg-2H-FZu" firstAttribute="leading" secondItem="ATF-1C-oJs" secondAttribute="leading" id="aua-i8-SDb"/>
+                        </constraints>
+                        <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                        <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ezC-bJ-cB9"/>
+                    <connections>
+                        <outlet property="_containerView" destination="MSj-iU-UPa" id="FBo-6w-c0X"/>
+                        <outlet property="_cropOverlay" destination="XXf-f3-I6d" id="m60-hX-O3v"/>
+                        <outlet property="_imageView" destination="4AS-Is-xvQ" id="ilL-oN-MKf"/>
+                        <outlet property="_scrollView" destination="7fg-2H-FZu" id="kQ4-t0-1D6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XFs-Nc-yQq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <rotationGestureRecognizer id="GiM-RN-hnn">
+                    <connections>
+                        <action selector="rotationGesture:" destination="7vZ-O0-XJf" id="5Vr-fv-bgt"/>
+                        <outlet property="delegate" destination="7vZ-O0-XJf" id="Kvh-O5-V7W"/>
+                    </connections>
+                </rotationGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="555" y="12"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

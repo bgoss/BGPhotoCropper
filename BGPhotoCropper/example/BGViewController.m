@@ -29,12 +29,13 @@
 }
 - (IBAction)startCropperTouchUp:(id)sender
 {
-    BGCropViewController *cropViewController = [[BGCropViewController alloc] init];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"BGCropViewController" bundle: nil];
+    UINavigationController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"BGCropNavigationVC"];
+    BGCropViewController *cropViewController = (BGCropViewController *)navigationController.topViewController;
     cropViewController.title = @"Test";
     cropViewController.image = [UIImage imageNamed:@"36"];
     cropViewController.delegate = self;
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:cropViewController];
-    [self presentViewController:navigationController animated:YES completion:NULL];
+    [self presentViewController:navigationController animated:YES completion:nil];
 }
 
 - (void)didFinishCropping:(UIImage *)croppedImage

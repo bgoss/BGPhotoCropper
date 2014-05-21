@@ -29,6 +29,10 @@
     CGRect visible = [_containerView convertRect:_imageView.bounds fromView:_imageView];
     _scrollView.contentOffset = visible.origin;
     _imageView.image = self.image;
+    
+    if (!CGRectIsEmpty(self.cropArea)) {
+        _cropOverlay.cropArea = self.cropArea;
+    }
 }
 
 - (void)setUpNavigationBar
@@ -64,9 +68,9 @@
 {
     CGFloat borderWidth = 1.0;
     CGRect cropArea = _cropOverlay.cropArea;
-    CGRect drawRect = CGRectMake(- cropArea.origin.x - borderWidth, - cropArea.origin.y - borderWidth, _cropOverlay.frame.size.width, _cropOverlay.frame.size.height);
+    CGRect drawRect = CGRectMake(- cropArea.origin.x - borderWidth, - cropArea.origin.y - borderWidth - _cropOverlay.frame.origin.y, _cropOverlay.frame.size.width, _cropOverlay.frame.size.height);
     
-    UIGraphicsBeginImageContext(CGSizeMake(cropArea.size.width - 2.0*borderWidth, cropArea.size.height - 3.0*borderWidth));
+    UIGraphicsBeginImageContext(CGSizeMake(cropArea.size.width - 2.0*borderWidth, cropArea.size.height - 2.0*borderWidth));
     [self.view drawViewHierarchyInRect:drawRect afterScreenUpdates:YES];
     UIImage *cropImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
