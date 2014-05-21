@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.platform            = :ios, "7.0"
   s.source              = { :git => "https://github.com/bgoss/BGPhotoCropper.git", :tag => "0.0.3" }
   s.source_files        = "BGPhotoCropper/*.{h,m}"
-  s.resources		= "BGPhotoCropper/*.xib"
+  s.resources		= "BGPhotoCropper/*.storyboard"
   s.public_header_files = "BGPhotoCropper/**/*.h"
   s.requires_arc        = true
 end
